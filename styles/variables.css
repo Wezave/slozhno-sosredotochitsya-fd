@@ -3,11 +3,17 @@
   и их переопределение под различные устройства
 */
 :root {
+  --accent-color: #ff8dcb;
   --background-image: url("../images/cover-image-light.png");
   --background-color: #fee6ff;
   --header__title-color: rgb(255, 194, 230);
-  --header__text-color: rgb(53, 52, 48);
+  --text-color: rgb(53, 52, 48);
   --header__text-background: rgb(255, 141, 203);
   --header__title-size: 116px;
-  --header__text-size: 18px;
+  --text-size: 18px;
+  --paddings: 10px;
+  --header__margin-bottom: 88px;
+  --header__title-margin-bottom: 55px;
+  --header__theme-margins: 65px 0px; 
+  --main__margin-bottom: 30px;
 }

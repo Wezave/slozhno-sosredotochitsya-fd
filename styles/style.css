@@ -10,9 +10,17 @@
   min-height: 668px;
 }
 
+.title-decor {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: var(--text-size);
+  color: var(--text-color);
+  background-color: var(--header__text-background);
+}
+
 .header {
   display: grid;
   position: relative;
+  padding: var(--paddings);
 }
 
 .header::before, .footer::before {
@@ -37,25 +45,90 @@
   border-left: 1px solid rgb(53, 52, 48);
 }
 
-.header__theme-menu {
+.header__theme-menu-list {
   justify-self: end;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: var(--header__theme-margins);
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: var(--text-size);
+  color: var(--text-color);
 }
+
+.header__theme-menu-button {
+  border: none;
+  color: rgb(53, 52, 48);
+  inline-size: 70px;    /*  можем задать строго,  */
+  block-size: 26px;     /*  т.к. таковы размеры во всех размерах сайта  */
+}
+
+
+.header__theme-menu-button_active {
+  border: 1px solid #000;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(50, 49, 45, 0.4); /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! поменять*/
+}
+
+
 
 .header__title {
   justify-self: start;
   font-family: "IBM Plex Mono", sans-serif;
   font-size: var(--header__title-size);
   font-weight: 700;
+  line-height: 83%;
   color: var(--header__title-color);
-
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin-bottom: var(--header__title-margin-bottom);
 }
 
 .header__text {
   justify-self: end;
-  background-color: var(--header__text-background);
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: var(--header__text-size);
   font-weight: 700;
-  color: var(--header__text-color);
+  margin-bottom: var(--header__margin-bottom);
+}
+
+.main__text-section {
+  display: grid;
+  gap: 20px;
+  padding: var(--paddings);
+  margin-bottom: var(--main__margin-bottom);
+}
+
+.main__header {
+  background-color: transparent;
+}
+
+.main__text {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  font-size: var(--text-size);
+  color: var(--text-color);
+  line-height: 23.4px;
+  margin-top: 10px; /*константа на всех разрешениях*/
+}
+
+.main__paragraph:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.text__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text__link:hover {
+  text-decoration: underline var(--text-color);
+}
+
+.text__link:focus-visible {
+  border: 1px solid var(--text-color);
+  border-radius: 0px;
+}
+
+.tips-title {
+  font-weight: 400;
 }
