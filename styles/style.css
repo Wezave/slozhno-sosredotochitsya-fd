@@ -8,11 +8,15 @@
   min-height: var(--page-min-height);
 }
 
+.dark-decoration, .dark-decoration::after {
+  display: none;
+}
+
 .title-decor {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: var(--text-size);
-  color: var(--text-color);
-  background-color: var(--header__text-background);
+  color: var(--title-text-color);
+  background-color: var(--accent-color);
   line-height: 23.4px;
   height: fit-content;
 }

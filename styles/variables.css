@@ -5,7 +5,7 @@
   --background-color: #fee6ff;
   --header__title-color: rgb(255, 194, 230);
   --text-color: rgb(53, 52, 48);
-  --header__text-background: rgb(255, 141, 203);
+  --title-text-color: rgb(53, 52, 48); /*нужно для темной темы, т.к. там они различны*/
   --header__title-size: 116px;
   --text-size: 18px;
   --paddings: 10px;
@@ -90,16 +90,43 @@
 }
 
 @media (width >= 1024px) {
-  /*:root {
+  :root {
     --paddings: 20px;
-    --header__theme-margins: 182px 0px; 
-  }*/
+    --header__theme-margins: 0px 0px 273px; 
+  }
 
-  .h1__title {
+  header > .h1__title {
     margin-left: -20px;
+    font-size: 157px;
+    line-height: 83%;
   }
 
   .header__text {
     max-inline-size: 491px;
+  }
+
+  .header__theme-menu > .header__theme-menu-list {
+    flex-direction: row;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .main__header {
+      min-width: 315px;
+  }
+
+  main > .main__text-section-concentration , main > .main__text-section-how {
+    grid-template-columns: min-content 1fr;
+  }
+
+  .main__text-section-why-ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  footer > .h1__title {
+    font-size: 157px;
+    line-height: 83%;
   }
 }
