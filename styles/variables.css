@@ -1,8 +1,5 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
+  --page-min-height: 100vh;
   --accent-color: #ff8dcb;
   --background-image: url("../images/cover-image-light.png");
   --background-color: #fee6ff;
@@ -12,8 +9,41 @@
   --header__title-size: 116px;
   --text-size: 18px;
   --paddings: 10px;
-  --header__margin-bottom: 88px;
-  --header__title-margin-bottom: 55px;
   --header__theme-margins: 65px 0px; 
-  --main__margin-bottom: 30px;
+}
+
+@media (768px <= width <= 1024px) {
+  :root {
+    --paddings: 20px;
+    --header__theme-margins: 172px 0px; 
+    --header__title-size: 120px;
+
+  }
+
+  .h1__title {
+    margin-left: -20px;
+  }
+
+  .header__text {
+    max-inline-size: 364px;
+  }
+
+  .main__text-section {
+    grid-template-columns: min-content 1fr;
+  }
+}
+
+@media (width >= 1024px) {
+  /*:root {
+    --paddings: 20px;
+    --header__theme-margins: 182px 0px; 
+  }*/
+
+  .h1__title {
+    margin-left: -20px;
+  }
+
+  .header__text {
+    max-inline-size: 491px;
+  }
 }
