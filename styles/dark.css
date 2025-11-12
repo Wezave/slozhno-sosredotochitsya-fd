@@ -4,7 +4,8 @@
   --accent-color: rgb(255, 0, 112);
   --text-color: rgb(241, 178, 206);
   --title-text-color: rgb(255, 0, 112);
-  --header__title-color: rgb(219, 0, 255);
+  --header-title-color: rgb(219, 0, 255);
+  --button-hover-color: rgba(255, 0, 112, 0.4);
 
   .dark-decoration {
     display: inline-block;
@@ -14,7 +15,7 @@
     display: inline-flex;
   }
   
-  h3, header > p {
+  .header > p, h3 {
     color: var(--background-color);
   }
 }
@@ -26,7 +27,8 @@
     --accent-color: rgb(255, 0, 112);
     --text-color: rgb(241, 178, 206);
     --title-text-color: rgb(255, 0, 112);
-    --header__title-color: rgb(219, 0, 255);
+    --header-title-color: rgb(219, 0, 255);
+    --button-hover-color: rgba(255, 0, 112, 0.4);
 
     .dark-decoration {
       display: inline-block;
@@ -36,7 +38,7 @@
       display: inline-flex;
     }
     
-    h3, header > p {
+    .header > p, h3 {
       color: var(--background-color);
     }
   }

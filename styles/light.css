@@ -2,9 +2,14 @@
   --background-image: url("../images/cover-image-light.png");
   --accent-color: #ff8dcb;
   --background-color: #fee6ff;
-  --header__title-color: rgb(255, 194, 230);
+  --header-title-color: rgb(255, 194, 230);
   --text-color: rgb(53, 52, 48);
   --title-text-color: rgb(53, 52, 48);
+  --button-hover-color: rgba(53, 52, 48, 0.4);
+
+  .header > p {
+    color: var(--text-color);
+  }
 
   .dark-decoration {
     display: none;
