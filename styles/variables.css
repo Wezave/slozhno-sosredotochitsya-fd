@@ -1,23 +1,21 @@
 :root {
   --page-min-height: 100vh;
-  --accent-color: #ff8dcb;
   --background-image: url("../images/cover-image-light.png");
+  --accent-color: #ff8dcb;
   --background-color: #fee6ff;
   --header__title-color: rgb(255, 194, 230);
   --text-color: rgb(53, 52, 48);
-  --title-text-color: rgb(53, 52, 48); /*нужно для темной темы, т.к. там они различны*/
+  --title-text-color: rgb(53, 52, 48);
   --header__title-size: 116px;
   --text-size: 18px;
   --paddings: 10px;
-  --header__theme-margins: 65px 0px; 
+  --line-height: 23.4px;
 }
 
 @media (width >= 768px) {
   :root {
     --paddings: 20px;
-    --header__theme-margins: 172px 0px; 
     --header__title-size: 120px;
-
   }
 
   .h1__title {
@@ -29,7 +27,7 @@
   }
 
   .main__header {
-      min-width: 236px;
+    min-inline-size: 236px;
   }
 
   main > .main__text-section {
@@ -42,7 +40,7 @@
   }
 
   .main__text-section-why > .main__header {
-    max-width: 236px;
+    max-inline-size: 236px;
   }
 
   .main__text-section-how {
@@ -50,7 +48,7 @@
   }
 
   .main__text-section-how > .main__header {
-    max-width: 236px;
+    max-inline-size: 236px;
     grid-row: 1/3;
   }
   .main__text-section-how > ul {
@@ -64,7 +62,7 @@
   }
 
   .gallery__image {
-    height: 100%;
+    block-size: 100%;
     object-fit: cover;
   }
 
@@ -91,8 +89,7 @@
 
 @media (width >= 1024px) {
   :root {
-    --paddings: 20px;
-    --header__theme-margins: 0px 0px 273px; 
+    --header__title-size: 157px;
   }
 
   header > .h1__title {
@@ -105,21 +102,24 @@
     max-inline-size: 491px;
   }
 
-  .header__theme-menu > .header__theme-menu-list {
-    flex-direction: row;
+  header > .header__theme-menu {
     justify-self: center;
     align-self: start;
   }
+  
+  .header__theme-menu > .header__theme-menu-list {
+    flex-direction: row;
+  }
 
   .main__header {
-      min-width: 315px;
+    min-inline-size: 315px;
   }
 
   main > .main__text-section-concentration , main > .main__text-section-how {
     grid-template-columns: min-content 1fr;
   }
 
-  .main__text-section-why-ul {
+  .main__text-section > .main__text-section-why-ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
