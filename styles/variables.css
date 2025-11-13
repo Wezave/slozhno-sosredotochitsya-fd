@@ -18,14 +18,8 @@
   --header-theme-menu-align-self: center;
   --header-theme-menu-list-direction: column;
   --main-text-section-why-ul: flex;
+  --gallery-display: inline-block;
 }
-
-@media (width < 768px) {
-  .main-text-section > .gallery {
-    display: inline-block;
-  }
-}
-
 
 @media (width >= 768px) {
   :root {
@@ -44,6 +38,7 @@
     --how-ul-grid-column: 2;
     --gallery-image-block-size: 100%;
     --gallery-image-object-fit: cover;
+    --gallery-display: grid;
   }
 }
 

@@ -18,5 +18,9 @@
   .dark-decoration::after {
     display: none;
   }
+
+  .main-paragraph > p {
+      --text-color: rgb(53, 52, 48);
+    }
 }
 
